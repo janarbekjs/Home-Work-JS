@@ -125,12 +125,14 @@
 
 // let resh = 10;
 // let nadoPro = 6;
+// let string = "";
 
 // for (let alfa = 0; alfa < nadoPro; alfa++) {
 //   if (alfa === 0 || alfa === nadoPro - 1) {
-//     console.log("*".repeat(resh));
+//     string += "*".repeat(resh);
 //   } else {
-//     console.log("*" + "-".repeat(resh - 2) + "*");
+//     string += "*" + "-".repeat(resh - 2) + "*";
 //   }
-//   nadoPro = nadoPro + "\n";
+//   string += "\n";
 // }
+// console.log(string);
