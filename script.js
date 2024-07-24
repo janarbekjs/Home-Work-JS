@@ -24,3 +24,12 @@
 // };
 // logToConsole(1, 90);
 
+
+// let reversedStrFor = "";
+// let string = "Hello";
+// for (let index = string.length - 1; index >= 0; index--) {
+//   reversedStrFor += string[index];
+// }
+// console.log(reversedStrFor);
+
+
