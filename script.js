@@ -98,13 +98,16 @@
 
 //!задача-4, Declaration function
 
-
-
-
-
-
-
-
+// function userN() {
+//   let userName = "Bill Gates";
+//   for (let i = 0; i < userName.length; i++) {
+//     const char = userName.charAt(i);
+//     if (char === "e") {
+//       console.log(`${char}`);
+//     }
+//   }
+// }
+// userN();
 
 //!задача-5, Declaration function
 
