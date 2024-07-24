@@ -96,6 +96,8 @@
 //     const result3 = arrowF(5,43);
 //     console.log(result3);
 
+//!задача-4, Declaration function
+
 
 
 
@@ -107,14 +109,14 @@
 //!задача-5, Declaration function
 
 // function users(text) {
-//   let juk = text.length;
-//   while (juk >= 0) {
-//     console.log(text.charAt(juk));
-//     juk--;
+//   let reversedStrFor = "";
+//   let string = "Hello";
+//   for (let index = string.length - 1; index >= 0; index--) {
+//     reversedStrFor += string[index];
 //   }
+//   console.log(reversedStrFor);
 // }
-// users("Hello");
-// users("Kak ona");
+// users();
 
 //!задача-5, expression function
 
