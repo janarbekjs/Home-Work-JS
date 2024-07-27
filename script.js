@@ -9,8 +9,8 @@
 // };
 // const student2 = Object.assign({}, student1);
 // student2.school = 87;
-// console.log(student2);
 // delete student2.age;
+// console.log(student1);
 // console.log(student2);
 
 //! Задание 2.
@@ -26,6 +26,7 @@
 
 //! Задание 3.
 //! Варянт 1.
+
 // const array = [
 //   1,
 //   true,
@@ -41,16 +42,74 @@
 // for (let rush in array) {
 //   console.log(array[rush]);
 // }
-const array = [
-  1,
-  true,
-  3,
-  { name: "ZH", hobbies: ["swimming", "reading"] },
-  5,
-  "Hello",
-  "Hi",
-];
+
+//! Задание 3.
+//! Варянт 2.
+
+// const array = [
+//   1,
+//   true,
+//   3,
+//   { name: "ZH", hobbies: ["swimming", "reading"] },
+//   5,
+//   "Hello",
+//   "Hi",
+// ];
+// console.log(array[1]);
+// console.log(array[4]);
+
+//! Задание 3.
+//! Все Варянты.
+
+// const array = [
+//   1,
+//   true,
+//   3,
+//   { name: "ZH", hobbies: ["swimming", "reading"] },
+//   5,
+//   "Hello",
+//   "Hi",
+// ];
+
+// console.log(array.at(5));
+
+// console.log(array[3].hobbies);
+
+// array[3].hobbies.push("footboll");
+// console.log(array);
+
+// array.push("Moscow");
+// console.log(array);
+
+// array.pop("Moscow");
+// console.log(array);
+
+// array.unshift("poco", 56);
+// console.log(array);
+
+// array.shift();
+// console.log(array);
+
+// console.log(array.includes(3, 2));
+
+// console.log(array.slice(0, 3));
+// console.log(array.splice(2, 4));
+
+// console.log(array.length);
 
 // //! Задание 4.
 
-// const newArray = [1, 2, 3, "sdf", {}, 3, true, 2, [1, 6, 3], 1];
+// const array = [1, 2, 3, "sdf", {}, 3, true, 2, [1, 6, 3], 1];
+// let sum = 0;
+// for (let i = 0; i < array.length; i++) {
+//   if (typeof array[i] === "number") {
+//     sum = sum + array[i];
+//   } else if (typeof array[i] === "object") {
+//     for (let k = 0; k < array[i].length; k++) {
+//       if (typeof array[i][k] == "number") {
+//         sum = sum + array[i][k];
+//       }
+//     }
+//   }
+// }
+// console.log(sum);
