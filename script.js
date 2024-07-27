@@ -70,6 +70,11 @@
 //   "Hello",
 //   "Hi",
 // ];
+// let newArray = array.lastIndexOf("Hello");
+// console.log(newArray);
+
+// array.sort();
+// console.log(array);
 
 // console.log(array.at(5));
 
@@ -93,7 +98,10 @@
 // console.log(array.includes(3, 2));
 
 // console.log(array.slice(0, 3));
-// console.log(array.splice(2, 4));
+// array.splice(2, 2, "Janarbek");
+// console.log(array);
+
+// console.log(array.splice(2, 5));
 
 // console.log(array.length);
 
