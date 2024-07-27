@@ -70,6 +70,7 @@
 //   "Hello",
 //   "Hi",
 // ];
+
 // let newArray = array.lastIndexOf("Hello");
 // console.log(newArray);
 
