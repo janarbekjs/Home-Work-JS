@@ -1,0 +1,31 @@
+.conteiner {
+  background-color: aqua;
+  padding: 50px;
+}
+.listcls {
+  border: 3px solid rgb(14, 15, 15);
+  background: white;
+  width: 400px;
+  height: 510px;
+}
+.listcls:hover {
+  background-color: rgba(7, 63, 247, 0.527);
+  border: none;
+}
+#link {
+  display: flex;
+  list-style: none;
+  gap: 100px;
+}
+.hover:hover {
+  background-color: rgb(15, 250, 7);
+}
+.hover {
+  background-color: black;
+}
+.hover:hover {
+  color: black;
+}
+.hover {
+  color: #ffffff;
+}
