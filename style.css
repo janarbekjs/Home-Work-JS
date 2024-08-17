@@ -1,0 +1,92 @@
+/* #conteiner {
+  width: 300px;
+  height: 300px;
+} */
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://shorturl.at/ypD4c") no-repeat fixed center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  margin-left: 70px;
+  color: rgb(255, 0, 0);
+  font-size: large;
+}
+
+#time-conteiner {
+  width: 50%;
+  height: 400px;
+  background: rgba(80, 100, 150, 0.6);
+  border-radius: 50px;
+  margin-top: 10%;
+}
+
+::placeholder {
+  color: black;
+}
+
+#minutes {
+  width: 240px;
+  height: 40px;
+  margin-top: 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: large;
+  padding-left: 20px;
+}
+
+#seconds {
+  width: 240px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: large;
+  padding-left: 20px;
+}
+
+.click-conteiner {
+  margin-top: -110px;
+  display: flex;
+  gap: 80px;
+}
+
+#time {
+  margin-top: -85px;
+  color: rgb(255, 0, 0);
+  font-size: 4em;
+}
+
+#time-restart {
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(0, 47, 255, 0.8);
+  color: white;
+  font-size: large;
+  &:hover {
+    background-color: rgb(255, 0, 0);
+  }
+}
+
+#time-start {
+  width: 150px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(0, 47, 255, 0.8);
+  font-size: large;
+  color: white;
+  &:hover {
+    background-color: rgb(255, 0, 0);
+  }
+} */
