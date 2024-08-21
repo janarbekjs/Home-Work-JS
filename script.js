@@ -1,57 +1,58 @@
 const ul = document.getElementById("ul-list");
 const input = document.getElementById("input");
-const button = document.getElementById("button");
+const form = document.getElementById("form");
 
 const BASE_URL = "https://50bcaa30f3d758cf.mokky.dev";
 
-const postTodo = async (objectTodo) => {
-  try {
-    const response = await fetch(`${BASE_URL}/items`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(objectTodo),
-    });
-    const data = await response.json();
-    console.log(data);
-    if (response.status === 201) {
-    }
-    getTodos();
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const getTodos = async (newArray) => {
-  try {
-    const response = await fetch(`${BASE_URL}/items`, {});
-    const result = await response.json();
-    if (response.status === 200) {
-    }
-    renderTodos(result);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-button.addEventListener("click", (e) => {
+form.addEventListener("click", (e) => {
   e.preventDefault();
   const todoValue = input.value.trim();
   if (todoValue) {
     const newTodo = {
       id: Date.now().toString(),
       title: todoValue,
+      completed: false,
     };
     input.value = "";
     postTodo(newTodo);
   }
 });
 
-const renderTodos = (newTodo) => {
+//! Request
+const postTodo = async (objectTodo) => {
+  try {
+    await fetch(`${BASE_URL}/items`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(objectTodo),
+    });
+
+    getTodos();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//! Get Request
+const getTodos = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/items`);
+    const result = await response.json();
+    if (response.status === 200) {
+      renderTodos(result);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//! Render
+const renderTodos = (newTodos = []) => {
   ul.innerHTML = "";
 
-  newTodo.map((item) => {
+  newTodos.map((item) => {
     const li = document.createElement("li");
     li.textContent = item.title;
 
@@ -65,26 +66,28 @@ const renderTodos = (newTodo) => {
     const buttonDe = document.createElement("button");
     buttonDe.className = "buttonDe";
     buttonDe.textContent = "DELETE";
+    input2.checked = item.completed;
 
+    //! Event
     input2.addEventListener("click", () => {
-      if (input2.checked) {
-        li.style.textDecoration = "line-through";
-        li.style.textDecorationColor = "red";
-        localStorage.setItem("todos", JSON.stringify(newArray));
-      } else {
-        li.style.textDecoration = "none";
-      }
+      completedTodo(item.id, item.completed);
     });
     buttonDe.addEventListener("click", () => buttonDelete(item.id));
     buttonUp.addEventListener("click", () => {
-      updateTodo(item.id.newArray);
+      updateTodo(item.id, newTodos);
     });
-
+    if (input2.checked) {
+      li.style.textDecoration = "line-through";
+      li.style.textDecorationColor = "red";
+    } else {
+      li.style.textDecoration = "none";
+    }
     li.append(input2, buttonUp, buttonDe);
     ul.appendChild(li);
   });
 };
 
+//! Delete
 const buttonDelete = async (id) => {
   try {
     const response = await fetch(`${BASE_URL}/items/${id}`, {
@@ -99,25 +102,39 @@ const buttonDelete = async (id) => {
   }
 };
 
-const updateTodo = async (id, newTodo) => {
-  const newFind = newTodo.find((item) => item, id);
-  input.value = newFind.value;
-  input.focus();
+//! Update
+const updateTodo = async (id, newTodos) => {
+  const newFind = newTodos.find((item) => item.id === id);
+  if (newFind !== undefined) {
+    input.value = newFind.title;
+    input.focus();
+  }
   try {
-    const response = await fetch(`${BASE_URL}/items/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application",
-      },
-      body: JSON.stringify({
-        title: input.value,
-      }),
+    await fetch(`${BASE_URL}/items/${id}`, {
+      method: "DELETE",
     });
-    const data = await response.json();
-    console.log(data);
-    getTodos(id);
+
+    getTodos();
   } catch (error) {
     console.log(error);
   }
 };
 getTodos();
+
+//! Completed
+const completedTodo = async (id, completed) => {
+  try {
+    await fetch(`${BASE_URL}/items/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        completed: !completed,
+      }),
+    });
+    getTodos();
+  } catch (error) {
+    console.log(error);
+  }
+};
