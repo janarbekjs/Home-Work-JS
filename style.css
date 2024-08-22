@@ -1,0 +1,113 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-image: url("https://shorturl.at/WEM98");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#h1 {
+  padding-left: 300px;
+  font-size: 4em;
+  color: rgb(212, 0, 255);
+  letter-spacing: 10px;
+  padding-bottom: 40px;
+}
+
+div {
+  background-color: rgba(0, 38, 255, 0.3);
+  margin-top: 40px;
+  border-radius: 20px;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#input {
+  width: 60em;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+#input::placeholder {
+  font-weight: bold;
+  font-size: x-large;
+  opacity: 0.8;
+  padding-left: 40px;
+  color: rgba(204, 0, 255, 0.651);
+}
+
+#button {
+  cursor: pointer;
+  font-size: 18px;
+  height: 62px;
+  width: 15em;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  border-radius: 40px;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#button:hover {
+  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+}
+
+.lishka {
+  list-style: none;
+  height: 60px;
+  width: 50em;
+  background-color: rgba(255, 255, 255, 0.822);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 20px;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.buttonUp {
+  height: 47px;
+  width: 140px;
+  border-radius: 25px;
+  background-color: rgba(183, 0, 255, 0.842);
+  color: white;
+  cursor: pointer;
+}
+
+.buttonUp:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+}
+
+.buttonDe {
+  height: 47px;
+  width: 140px;
+  border-radius: 25px;
+  margin-right: 10px;
+  background-color: rgba(183, 0, 255, 0.842);
+  color: white;
+  cursor: pointer;
+}
+
+.buttonDe:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+} */
